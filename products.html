@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Minimalist Furniture Co.</title>
+    <link rel="stylesheet" href="./css/products.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>Minimalist Furniture Co.</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+      </div>
+    </nav>
+    <section class="product-intro">
+      <h2>Explore Our Products</h2>
+      <p>
+        Discover the perfect minimalist pieces to fit your space and lifestyle.
+      </p>
+    </section>
+    <section class="search-section">
+      <input
+        type="text"
+        placeholder="Search products..."
+        class="search-input"
+        id="product-search"
+      />
+    </section>
+    <section class="product-grid" id="product-list"></section>
+    <footer>
+      <p>This website was created for Web Technology module’s Coursework.</p>
+      <p>&copy; 2024 Minimalist Furniture Co.</p>
+    </footer>
+    <script>
+      const products = [
+        {
+          name: "Modern Wooden Chair",
+          description: "Elegant and sturdy.",
+          img: "./img/p1.png",
+        },
+        {
+          name: "Minimalist Coffee Table",
+          description: "Sleek and practical.",
+          img: "./img/p2.png",
+        },
+        {
+          name: "Simple Bookshelf",
+          description: "Perfect for organizing your space.",
+          img: "./img/p3.png",
+        },
+        {
+          name: "Modern Wooden Chair",
+          description: "Elegant and sturdy.",
+          img: "./img/p1.png",
+        },
+        {
+          name: "Minimalist Coffee Table",
+          description: "Sleek and practical.",
+          img: "./img/p2.png",
+        },
+        {
+          name: "Simple Bookshelf",
+          description: "Perfect for organizing your space.",
+          img: "./img/p3.png",
+        },
+        {
+          name: "Modern Wooden Chair",
+          description: "Elegant and sturdy.",
+          img: "./img/p1.png",
+        },
+        {
+          name: "Minimalist Coffee Table",
+          description: "Sleek and practical.",
+          img: "./img/p2.png",
+        },
+        {
+          name: "Simple Bookshelf",
+          description: "Perfect for organizing your space.",
+          img: "./img/p3.png",
+        },
+      ];
+
+      const productList = document.getElementById("product-list");
+      products.forEach((product) => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+        productCard.setAttribute("data-name", product.name);
+
+        const img = document.createElement("img");
+        img.src = product.img;
+        img.alt = product.name;
+
+        const name = document.createElement("h3");
+        name.textContent = product.name;
+
+        const description = document.createElement("p");
+        description.textContent = product.description;
+
+        productCard.appendChild(img);
+        productCard.appendChild(name);
+        productCard.appendChild(description);
+        productList.appendChild(productCard);
+      });
+
+      const searchInput = document.getElementById("product-search");
+      const productCards = document.querySelectorAll(".product-card");
+
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        productCards.forEach((card) => {
+          const productName = card.dataset.name.toLowerCase();
+          if (productName.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

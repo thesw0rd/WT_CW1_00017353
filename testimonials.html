@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials - Minimalist Furniture Co.</title>
+    <link rel="stylesheet" href="./css/testimonials.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>Minimalist Furniture Co.</h1>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+      </div>
+    </nav>
+
+    <section class="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial-card">
+        <p>
+          "The minimalist furniture we purchased from Minimalist Furniture Co.
+          transformed our living space. Highly recommended!"
+        </p>
+        <div class="author">- John Doe</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Exceptional quality and timeless designs. I couldn’t be happier with
+          my purchase."
+        </p>
+        <div class="author">- Jane Smith</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Amazing service and fantastic products. Perfect for anyone who loves
+          clean, modern aesthetics."
+        </p>
+        <div class="author">- Alice Johnson</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Fast delivery and easy assembly. The team was incredibly
+          professional."
+        </p>
+        <div class="author">- Michael Brown</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "I received so many compliments on the new coffee table. It’s exactly
+          what I needed."
+        </p>
+        <div class="author">- Emily Davis</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Sustainable materials and beautiful designs. It feels good to support
+          an eco-friendly company."
+        </p>
+        <div class="author">- David Wilson</div>
+        <button class="like-btn">Like</button>
+        <span class="like-count">0</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Minimalist Furniture Co.</p>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".like-btn").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const countSpan = event.target.nextElementSibling;
+          let count = parseInt(countSpan.textContent, 10);
+          count++;
+          countSpan.textContent = count;
+        });
+      });
+    </script>
+  </body>
+</html>
