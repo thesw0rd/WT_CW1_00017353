@@ -12,7 +12,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3e2723;  /* Темно-коричневый оттенок */
+    background-color: #3e2723; 
     padding: 20px 30px;
 }
 nav .logo h1 {

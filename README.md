@@ -1,6 +1,7 @@
 # Minimalist Furniture Co.
 
-This project includes six responsive pages, each with unique designs.
+This project includes six responsive pages, each with unique designs. Website is hosted and can be accessed through:
+https://00017353.github.io/WT_CW1_00017353/
 
 ## Pages
 
